@@ -28,7 +28,7 @@ router.get(
     } else {
       // res.status(404).json({ message: 'Product not found' });
 
-      // if we want 404 error, not 500
+      // if we want 404 error, not 500 (by defoult)
       res.status(404);
       throw new Error('Product not found');
     }

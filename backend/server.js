@@ -11,6 +11,16 @@ connectDB();
 
 const app = express();
 
+// middleware example
+// app.use((req, res, next) => {
+//   console.log('hello');
+//   console.log(req.originalUrl);
+//   console.log(req.headers.connection);
+//   console.log(req.headers['user-agent']);
+//   // res.send(req.originalUrl);
+//   next();
+// });
+
 app.get('/', (req, res) => {
   res.send('Api is running...');
 });
@@ -26,6 +36,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(
   PORT,
   console.log(
-    `Server is running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow
+    `Server is running in ${process.env.NODE_ENV} mode on port ${PORT} go to http://localhost:${PORT}/api/products`
+      .yellow
   )
 );
