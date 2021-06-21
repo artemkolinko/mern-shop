@@ -8,6 +8,8 @@ import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import ShippingScring from './screens/ShippingScring';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Container>
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
+          <Route path='/shipping' component={ShippingScring} />
+          <Route path='/profile' component={ProfileScreen} />
           <Route path='/product/:id' component={ProductScreen} />
           {/* :id? -"?" означает не обязателный */}
           <Route path='/cart/:id?' component={CartScreen} />
