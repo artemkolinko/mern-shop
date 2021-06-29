@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import morgan from 'morgan';
 import colors from 'colors';
 import connectDB from './config/db.js';
 import productRouters from './routes/productRouters.js';
@@ -22,6 +23,7 @@ const app = express();
 //   next();
 // });
 
+app.use(morgan('tiny'))
 app.use(express.json());
 
 app.get('/', (req, res) => {
